@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+<link rel="stylesheet" href=".\assets\css\style.css">
+<script src="https://kit.fontawesome.com/45142689e7.js" crossorigin="anonymous"></script>
+<title>Weather Dashboard</title>
+</head>
+    
+<body class="flex-column min-100-vh">
+    <header class="hero">
+      <h1 class="app-title text-center"> Weather Dashboard</h1>
+    </header>
+
+    <section class="flex-row justify-space-between">
+        <div class="col-12 col-md-4">
+        <div class="card">
+            <h3 class="card-header"><strong>Search by City</strong></h3>
+            <form id="search-form" class="card-body">
+                <input name="search" type="text" class="form-control" id="searchBar" aria-describedby="searchHelp" placeholder="Boston" autofocus="true">
+                <!-- make this cool with fas fa or whatever that is -->
+                <button type="submit" class="btn btn-primary mt-2"><i class="fa-solid fa-magnifying-glass-location fa-xl"></i></button>
+            </form>
+        </div>
+        <!-- can add m or p -->
+        <div class="list-group">
+            <h5 class="card-header">Previous Searches:</h5>
+                <ul class="list-group" id="city-search-term"></ul>
+          </div>
+
+        <div class="col-12 col-md-8">
+            <div class="card" id="currentWeather" style="visibility:hidden">
+                <div id="city"></div>
+                <div id="date"></div>
+                <div id="temp"></div>
+                <div id="wind"></div>
+                <div id="humidity"></div>
+                <!-- figure out which way -->
+                <!-- <h6 class="mb-4 ml-2 card" type=text id="uvIndex"> </h6>
+                <div class="col-md-2 icon"><i id="weatherIcon"></i></div> -->
+                <div id="UV Index">UV Index: <span class="color"></span></div>
+            </div>  
+            <!-- if issues, change visibility:hidden to display:none -->
+            <div class="card" id="fiveDay" style="visibility:hidden">  
+                <div id="fiveDayHeader">5-Day Forecast:</div>
+                <div class="card-deck">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 id="day1"></h5>
+                            <div class="row"><i id="day1Icon"></i></div>
+                            <text class="row"><i id=day1Humidity></i></div>
+                            <text class="row"><i id=day1Temp></i><div>
+                            <p class="card-text"><small class="text-muted"></small></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 id="day2"></h5>
+                            <div class="row"><i id="day2Icon"></i></div>
+                            <text class="row"><i id=day2Humidity></i></div>
+                            <text class="row"><i id=day2Temp></i><div>
+                            <p class="card-text"><small class="text-muted"></small></p>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 id="day3"></h5>
+                            <div class="row"><i id="day3Icon"></i></div>
+                            <text class="row"><i id=day3Humidity></i></div>
+                            <text class="row"><i id=day3Temp></i><div>
+                            <p class="card-text"><small class="text-muted"></small></p>
+                        </div>
+                        <div class="card">
+                        <div class="card-body">
+                            <h5 id="day4"></h5>
+                            <div class="row"><i id="day4Icon"></i></div>
+                            <text class="row"><i id=day4Humidity></i></div>
+                            <text class="row"><i id=day4Temp></i><div>
+                            <p class="card-text"><small class="text-muted"></small></p>
+                        </div>
+                        <div class="card">
+                        <div class="card-body">
+                            <h5 id="day5"></h5>
+                            <div class="row"><i id="day5Icon"></i></div>
+                            <text class="row"><i id=day5Humidity></i></div>
+                            <text class="row"><i id=day5Temp></i><div>
+                            <p class="card-text"><small class="text-muted"></small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script src="assets\js\script.js"></script>
+</body>
+</html>
