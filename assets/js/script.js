@@ -147,5 +147,4 @@ $(document).ready(function () {
 
         getWeather();
     })
- getWeather(NewYork);
 })
