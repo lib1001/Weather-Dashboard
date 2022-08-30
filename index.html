@@ -22,28 +22,31 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-sm-4" style="padding-top: 10px; text-align: center;">
+      <div class="col-sm-4" id="weather-column">
         <div class="form-group" for="search">Enter a City:
           <input type="text" class="form-control" id="search-term">
           <button type="submit" class="btn btn-primary" id="run-search">
             <i class="fa-solid fa-magnifying-glass-location"></i> Search</button>
-        </div><!-- form group-->
+        </div>
 
-        <div class="col buttons-view"></div>
+        <div class="col searched-buttons"></div>
       </div>
 
-      <div class="col-md-8">
-        <div class="row" style="padding-top: 10px;">
+      <div class="col-md-8" id="search-column">
+        <div class="row">
           <div class="col-md">
 
-            <div style="padding-left:10px;" class="search-data"></div>
+            <div class="weather-data">
+                <div><img class="current-icon"></div>
+                <p id="uv-index"><span class="color"></span></p>
+            </div>
 
             <div class="col-md-10 fiveDayHeader"></div>
             <div class="col-md-1"></div>
             <div class="col-md-1"></div>
           </div>
 
-          <div class="row" style="margin: 15px;">
+          <div class="row" id="fiveDays">
 
             <div class="col-md-auto">
               <div><img class="day1-icon"></div>

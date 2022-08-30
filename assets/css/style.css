@@ -16,8 +16,18 @@ body {
 
 .hero-title {
     text-align: center;
-    font-size: 50px;
+    font-size: 75px;
     font-weight: bold;
+	padding: 15px
+}
+
+#weather-column {
+	padding-top: 10px; 
+	text-align: center;
+}
+
+#search-column {
+	padding-top: 12px
 }
 
 .buttons-view {
@@ -25,7 +35,7 @@ body {
   padding-bottom: 30px;
 }
 
-.buttons-view .btn {
+.searched-buttons .btn {
     width: 100%;
     border-style: solid;
     border-width: 1px;
@@ -33,6 +43,14 @@ body {
     margin-bottom: 5px;
     background-color: #E3E8F8;
     text-align: left;
+}
+
+#fiveDays {
+	margin: 15px;
+}
+
+.search-results {
+	padding-left:12px
 }
 
 .container {
