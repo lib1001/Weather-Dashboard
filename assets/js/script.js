@@ -145,7 +145,7 @@ $(document).ready(function () {
         cityName = $(this).text();
         console.log(cityName);
 
-        getWeather(NewYork);
+        getWeather();
     })
-
+ getWeather(NewYork);
 })
