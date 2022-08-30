@@ -1,88 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
-  <script src="https://kit.fontawesome.com/45142689e7.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./assets\css\style.css" />
-
-  <title>Weather Dashboard</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://kit.fontawesome.com/45142689e7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets\css\style.css">
+    <title>Weather Dashboard</title>
 </head>
 
 <body>
-  <header class="hero">
-    <h1 class="hero-title">Weather Dashboard</h1>
-
-  </header>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-4" id="weather-column">
-        <div class="form-group" for="search">Enter a City:
-          <input type="text" class="form-control" id="search-term">
-          <button type="submit" class="btn btn-primary" id="run-search">
-            <i class="fa-solid fa-magnifying-glass-location"></i> Search</button>
+    <header class="hero">
+        <h1 class="hero-title">Weather Dashboard</h1>
+      </header>
+    <div class="container-fluid">
+        <div class="row mt-2">
+            <aside class="col-lg-4">
+                <div class="card bg-light p-2 mb-2">
+                    <h4>Enter a City Name:</h4>
+                    <form class="form-inline" id="city-form">
+                        <input class="form-control sm-2" id="city-input" type="search" aria-label="Search">
+                        <button type="button" class="btn btn-primary" type="submit" id="form-submit"><i class="fa-solid fa-magnifying-glass-location"></i> Search</button></button>
+                    </form>
+                    <ul class="list-group mt-2" id="city-list">
+                    </ul>
+                </div>
+            </aside>
+            <div class="col-lg-8">
+                <section class="card p-2" id="current" style="display:none;">
+                    <h1 id="city"></h1>
+                    <h5 id="date"></h5>
+                    <p id="temp"></p>
+                    <p id="humidity"></p>
+                    <p id="wind"></p>
+                    <p id="uv-index">UV Index: <span class="color"></span></p>
+                </section>
+                <section class="mt-2 mb-2" id="five-day" style="display:none;">
+                    <h3>5-Day Forecast:</h3>
+                    <div class="card-deck">
+                    </div>
+                </section>
+            </div>
         </div>
-
-        <div class="col searched-buttons"></div>
-      </div>
-
-      <div class="col-md-8" id="search-column">
-        <div class="row">
-          <div class="col-md">
-
-            <div class="weather-data">
-                <div><img class="current-icon"></div>
-                <p id="uv-index"><span class="color"></span></p>
-            </div>
-
-            <div class="col-md-10 fiveDayHeader"></div>
-            <div class="col-md-1"></div>
-            <div class="col-md-1"></div>
-          </div>
-
-          <div class="row" id="fiveDays">
-
-            <div class="col-md-auto">
-              <div><img class="day1-icon"></div>
-              <div class="day1"></div>
-            </div>
-
-            <div class="col-md-auto">
-              <div><img class="day2-icon"></div>
-              <div class="day2"></div>
-            </div>
-
-            <div class="col-md-auto">
-              <div><img class="day3-icon"></div>
-              <div class="day3"></div>
-            </div>
-
-            <div class="col-md-auto">
-              <div><img class="day4-icon"></div>
-              <div class="day4"></div>
-            </div>
-
-            <div class="col-md-auto">
-              <div><img class="day5-icon"></div>
-              <div class="day5"></div>
-            </div>
-
-            <div class="col-md-1"></div>
-          </div>
-        </div>
-      </div>
-
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="assets\js\script.js"></script>
-
 </body>
+
 </html>

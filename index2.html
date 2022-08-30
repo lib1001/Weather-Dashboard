@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+  <script src="https://kit.fontawesome.com/45142689e7.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets\css\style.css" />
+
+  <title>Weather Dashboard</title>
+</head>
+
+<body>
+  <header class="hero">
+    <h1 class="hero-title">Weather Dashboard</h1>
+  </header>
+      <div class="container-fluid">
+          <div class="row mt-2">
+              <aside class="col-lg-4">
+                  <div class="card side-card">
+                      <h4>Search by City:</h4>
+                      <form class="form-inline" id="search-form">
+                          <input class="form-control sm-2" id="city-input" type="search" aria-label="Search" placeholder="Search" autofocus="true">
+                          <button type="submit" class="btn btn-primary" id="run-search">
+                            <i class="fa-solid fa-magnifying-glass-location"></i> Search</button>
+                      </form>
+
+                      <ul class="list-group" id="city-list">
+                      </ul>
+                  </div>
+              </aside>
+
+              <div class="col-lg-8">
+                  <section class="card main-card" id="currentWeather" style="display:none;">
+                      <h1 id="location"></h1>
+                      <h3 id="date"></h3>
+                      <p id="temp"></p>
+                      <p id="wind"></p>
+                      <p id="humidity"></p>
+                      <p id="uv-index">UV Index: <span class="uvRange"></span></p>
+                  </section>
+
+                  <section class="mt-2 mb-2" id="five-day-forecast" style="display:none;">
+                      <h3>5-Day Forecast</h3>
+
+                      <div class="card-deck">
+                      </div>
+                  </section>
+              </div>
+          </div>
+      </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="assets\js\script.js"></script>
+
+</body>
+</html>

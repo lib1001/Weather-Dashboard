@@ -21,51 +21,16 @@ body {
 	padding: 15px
 }
 
-#weather-column {
-	padding-top: 10px; 
-	text-align: center;
+.side-card {
+    background-color: #E3E8F8 ;
+    padding: 10px 10px 15px 10px;
+    margin: 8px;
 }
 
-#search-column {
-	padding-top: 12px
+#city-list {
+    margin-top: 10px;
 }
 
-.buttons-view {
-  width: 100%;
-  padding-bottom: 30px;
-}
-
-.searched-buttons .btn {
-    width: 100%;
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
-    margin-bottom: 5px;
-    background-color: #E3E8F8;
-    text-align: left;
-}
-
-#fiveDays {
-	margin: 15px;
-}
-
-.search-results {
-	padding-left:12px
-}
-
-.container {
-    padding: 25px;
-	border-style: solid;
-	border-width: 1px
-}
-
-.cityWeather {
-    padding: 30px;
-    border-style: solid;
-    border-width: 1px
-}
-
-#run-search,
-#clear-search {
-    margin-top: 15px;
+.main-card {
+    padding: 5px;
 }
