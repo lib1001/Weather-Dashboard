@@ -42,7 +42,7 @@ $(document).ready(function () {
             iconImage.attr("src", "https://openweathermap.org/img/wn/" + icon + "@2x.png")
             $("#location").append(iconImage);
 
-            // uvindex ranges info found through google search
+            // uvindex ranges info found through google search since uvi wasn't included in free api
             var uvi = parseInt(response.current.uvi);
             if (uvi <= 2) {
                 $(".uvRange").css({"background-color":"green", "color":"white"});
@@ -53,7 +53,7 @@ $(document).ready(function () {
             } else if (uvi >= 8 && uvi <= 10) {
                 $(".uvRange").css({"background-color":"red", "color": "white" });
             } else if (uvi >= 11) {
-                $(".uvRange").css({"background-color":"blue", "color": "white" });
+                $(".uvRange").css({"background-color":"black", "color": "white" });
             }
 
 
